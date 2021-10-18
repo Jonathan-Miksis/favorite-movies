@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+movie = Movie.new(
+  title: "Skyfall",
+  director: "Sam Mendes",
+  year: 2012
+)
+movie.save
