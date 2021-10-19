@@ -22,9 +22,9 @@ class MoviesController < ApplicationController
 
   def update
     movie = Movie.find_by(id: params[:id])
-    movie.title = params[:title]
-    movie.director = params[:director]
-    movie.year = params[:year]
+    movie.title = params[:title] || movie.title
+    movie.director = params[:director] || movie.director
+    movie.year = params[:year] || movie.year 
     movie.save
     render json: movie.as_json
   end
