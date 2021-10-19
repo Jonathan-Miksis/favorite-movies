@@ -1,1 +1,14 @@
 GET http://localhost:3000/movies
+
+###
+GET http://localhost:3000/movies/2
+
+###
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": "Cinderella Man",
+  "director": "Ron Howard",
+  "year": 2008
+}
