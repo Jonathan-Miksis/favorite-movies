@@ -12,3 +12,13 @@ Content-Type: application/json
   "director": "Ron Howard",
   "year": 2008
 }
+
+###
+PATCH http://localhost:3000/movies/4
+Content-Type: application/json
+
+{
+  "title": "The Imitation Game",
+  "director": "Morten Tyldum",
+  "year": 2014
+}

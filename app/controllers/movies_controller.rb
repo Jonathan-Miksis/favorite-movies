@@ -20,4 +20,14 @@ class MoviesController < ApplicationController
     render json: movie.as_json
   end
 
+  def update
+    movie = Movie.find_by(id: params[:id])
+    movie.title = params[:title]
+    movie.director = params[:director]
+    movie.year = params[:year]
+    movie.save
+    render json: movie.as_json
+  end
+
+
 end
